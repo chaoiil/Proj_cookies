@@ -1,0 +1,115 @@
+
+img{
+  width: 35%; 
+  height: 35%; 
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  border: none;
+
+}
+
+.block1{
+background-color: rgb(255, 255, 255);
+width: 30vw;
+height: 20vh;
+color: #C5A459;
+}
+.block2{
+width: 30vw;
+height: 20vh;
+text-align: center;
+}
+.block3{
+  background-color: rgb(255, 255, 255);
+  width: 30vw;
+  height: 20vh;
+}
+
+.block5{
+  background-color: rgb(255, 255, 255);
+  width: 30vw;
+  height: 20vh;
+}
+
+.block4{
+  width: 30vw;
+  height: 20vh;
+  text-align: center;
+}
+
+.block6{
+  width: 30vw;
+  height: 20vh;
+  text-align: center;
+}
+
+
+
+
+button {
+  position: relative;
+  cursor: pointer;
+}
+
+.block{
+background-color: #0EA5D9;
+height: 100%;
+width: 30%;
+position: absolute;
+top: 0px;
+right: 0px;
+overflow-x: hidden;
+overflow-y: scroll;
+display: block;
+border-style: solid;
+
+}
+
+.icone{
+flex-direction: column;
+display: flex;
+align-items: center;
+overflow: hidden;
+height: 100px;
+width: 100px;
+border-radius: 50%;
+padding: 20px;
+
+}
+  
+img{
+width: 300px;
+height: 300px;
+}
+
+h2{
+  color: #C5A459;
+  text-align: center;
+}
+
+.clickerbutton{
+  margin: 2%;
+  width: 10%;
+  height: 10%;
+  margin-left: 30%;
+  
+}
+
+
+p{
+  color: #C5A459;
+  font-family: "SHIRENS",Helvetica,Arial,sans-serif;
+
+}
+
+.ballon {
+  color: white;
+  font-size: 24px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 4px;
+  margin: 4px;
+  display: inline-block;
+}
