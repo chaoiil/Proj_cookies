@@ -1,115 +1,118 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 
 img{
-  width: 35%; 
-  height: 35%; 
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  border: none;
-
+width: 20%; 
+height: 20%; 
+position: absolute;
+cursor: pointer;
+overflow: hidden;
+outline: none;
+border: none;
 }
 
-.block1{
-background-color: rgb(255, 255, 255);
-width: 30vw;
-height: 20vh;
-color: #C5A459;
-}
-.block2{
-width: 30vw;
-height: 20vh;
-text-align: center;
-}
-.block3{
-  background-color: rgb(255, 255, 255);
-  width: 30vw;
-  height: 20vh;
-}
-
-.block5{
-  background-color: rgb(255, 255, 255);
-  width: 30vw;
-  height: 20vh;
-}
-
-.block4{
-  width: 30vw;
-  height: 20vh;
-  text-align: center;
-}
-
-.block6{
-  width: 30vw;
-  height: 20vh;
-  text-align: center;
-}
-
-
-
-
-button {
-  position: relative;
-  cursor: pointer;
+.decor{
+padding: 0px;
+width: 80vw;
+height: 100vh;
+background-image: url(../Images/equipeom.jpg);
+background-size: contain;
+background-position: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
 }
 
 .block{
-background-color: #0EA5D9;
-height: 100%;
-width: 30%;
+background-color: #0ea8dc;
+height: 100vh;
+width: 30vw;
 position: absolute;
 top: 0px;
 right: 0px;
 overflow-x: hidden;
 overflow-y: scroll;
 display: block;
-border-style: solid;
+transition: opacity 0.25s ease-out, margin-bottom 0.1s ease-out;
+}
 
+.block1{
+background-color:  #C5A459;
+width: 30vw;
+height: 15vh;
+user-select: none;
+box-shadow: 0px 0px 4px #000 inset;
+position: relative;
+text-align: center;
+color: #fff;
+font-weight: bold;
+font-size: 14px;
+overflow: hidden;
+}
+
+button {
+cursor: pointer;
+position: absolute;
+left: 0;
 }
 
 .icone{
 flex-direction: column;
 display: flex;
 align-items: center;
-overflow: hidden;
-height: 100px;
+height: 80px;
 width: 100px;
 border-radius: 50%;
-padding: 20px;
-
+padding-top: 10px;
+padding-left: 20px;
+position: absolute;
 }
-  
+
+.click{
+  width: 256px;
+  height: 256px;
+}
+
 img{
 width: 300px;
 height: 300px;
 }
 
 h2{
-  color: #C5A459;
-  text-align: center;
+color: #ffffff;
+text-align: center;
+}
+
+h3{
+color: #C5A459;
+background-color: #fcfbfbdc;
+display: flex;
+justify-content: center; 
+align-items: center;
+position: absolute;
+width: 50%;
+left: 25%;
+top: -200px;
 }
 
 .clickerbutton{
-  margin: 2%;
-  width: 10%;
-  height: 10%;
-  margin-left: 30%;
-  
+margin: 25%;
+margin-left: 10%;
+width: 50%;
+position: absolute;
 }
 
-
-p{
-  color: #C5A459;
-  font-family: "SHIRENS",Helvetica,Arial,sans-serif;
-
+button#Logo_click img {
+border-radius: 50%; 
+background-color: #fcfbfbdc; 
 }
 
-.ballon {
-  color: white;
-  font-size: 24px;
-  background-color: black;
-  border-radius: 50%;
-  padding: 4px;
-  margin: 4px;
-  display: inline-block;
+button#Logo_click {
+display: flex;
+justify-content: center; 
+align-items: center;
+position: absolute;
+top: 50%;
+left: 50%;
 }
