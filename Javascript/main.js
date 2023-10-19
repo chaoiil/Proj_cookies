@@ -1,65 +1,79 @@
 let compteur = 0;
 let multiplicateur = 1;
 let autoClickInterval;
-let rythmeClic = 0;
+let autoClickIntervalL;
 let clic = 1;
 let prixB = 20;
-let prixD = 50;
+let couleur_bouton;
 
-
-const Logoclick = document.getElementById('Logo_click');
+const logoclick = document.getElementById('Logo_click');
 const span = document.getElementById('span_id');
-
-const LogoB = document.getElementById('LogoB');
+const logoB = document.getElementById('LogoB');
 const spanB = document.getElementById('spanB');
-
-
+const logoL = document.getElementById('LogoL');
+const spanL = document.getElementById('spanL');
 const autoclick = document.getElementById('clickauto')
 const span_auto = document.getElementById('span_id')
 
-const clickrythme = document.getElementById('clickrythme')
-const span_rythme = document.getElementById('span_rythme')
-
 
 // Le clicker 
-Logoclick.addEventListener("click", (event) => {
-compteur += clic;
-span.innerHTML = compteur
-
+logoclick.addEventListener("click", (event) => {
+  compteur += clic;
+  span.innerHTML = compteur
 });
 
-LogoB.addEventListener("click", (event) => {
-if (compteur >= prixB) {
-compteur -= prixB;
-prixB += 20;
-compteur.innerHTML = compteur;
-spanB.innerHTML = prixB;
-clic++;
-} else {
-alert("Vous n'avez pas suffisamment de points pour acheter SUPER MARIO !");
-}
+// Le cliquer augmente a chaque click et augmente le prix
+
+logoB.addEventListener("click", (event) => {
+  if (compteur >= prixB) {
+    compteur -= prixB;
+    prixB += 20;
+    span.innerHTML = compteur;
+    spanB.innerHTML = prixB;
+    clic++;
+    colour();
+  } else {
+   alert("Vous n'avez pas suffisamment de points pour acheter SUPER MARIO !");
+  }
 });
 
+// Auto cliquer que tu debloques des que tu auras atteint 128 000 euros
 function DebutAutoClick() {
-compteur++;
-span.innerHTML = compteur;
-;
+  compteur++;
+  colour();
+  span.innerHTML = compteur;
 }
-LogoD.addEventListener("click", (event) => {
- if (compteur >= 128000) {
-span.innerHTML = compteur;
-const autoClickInterval = setInterval(DebutAutoClick, 100);
+logoD.addEventListener("click", (event) => {
+if (compteur >= 128000) {
+  span.innerHTML = compteur;
+  const autoClickInterval = setInterval(DebutAutoClick, 100);
 } 
 else {
-alert("Vous n'avez pas suffisamment de points pour acheter DIDIER DROGBA !");
+  alert("Vous n'avez pas suffisamment de points pour acheter DIDIER DROGBA !");
 }
-
-
-
-
-
-
 });
+// Pendant 5 secondes le clique se multiplie par 3  
+function DebutAutoClickLass() {
+  compteur *= 3;
+  colour();
+  span.innerHTML = compteur;
+}
+const autoClickInterval2 = setTimeout(DebutAutoClickLass, 5000);
+logoL.addEventListener("click", (event) => {
+  if (compteur >= 200000) {
+    span.innerHTML = compteur;
+    const autoClickInterval2 = setInterval(DebutAutoClickLass, 1000);
+    setTimeout(() => {
+      clearInterval(autoClickInterval2); 
+      }, 3000
+    );
+  }
+  else {
+   alert("Vous n'avez pas suffisamment de points pour acheter LASSANA DIARRA!");
+  }
+});
+
+
 
 
 

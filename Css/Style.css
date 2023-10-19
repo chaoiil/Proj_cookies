@@ -37,8 +37,8 @@ display: block;
 transition: opacity 0.25s ease-out, margin-bottom 0.1s ease-out;
 }
 
-.block1{
-background-color:  #C5A459;
+.block>div{
+background-color: #C5A459;
 width: 30vw;
 height: 15vh;
 user-select: none;
@@ -85,6 +85,7 @@ text-align: center;
 }
 
 h3{
+font-size: 30px;
 color: #C5A459;
 background-color: #fcfbfbdc;
 display: flex;
